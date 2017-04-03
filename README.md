@@ -2,18 +2,23 @@
 
 ## User Stories
 
-As a Makers Student
-So I can access useful websites quickly
-I want to see a list of links (from the database)
+As a time-pressed user
+So that I can access useful websites quickly
+I want to see a list of links on the homepage
 
-As a Makers Student
-So that I can update my bookmarks
-I want to be able to add new links
 
-As an internet explorer
-So that I can categorise my bookmarks
-I want to be able to tag the links
+As a time-pressed user
+So that I can quickly find websites I recently bookmarked
+I would like to see links in descending chronological order
 
-As an internet explorer
-So that I can search for a specific bookmark
-I want to be able to filter the links by their tag
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to my bookmark manager
+
+As a time-pressed user
+So that I can organise my many links into different categories for ease of search
+I would like to add tags to the links in my bookmark manager
+
+As a time-pressed user
+So that I can quickly find links on a particular topic
+I would like to filter the links by tag
