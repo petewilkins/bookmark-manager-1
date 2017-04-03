@@ -1,10 +1,13 @@
-# bookmark_manager
 
-## User Stories
+Stakeholder
+Motivation
+Action
+
 
 As a Makers Student
 So I can access useful websites quickly
 I want to see a list of links (from the database)
+
 
 As a Makers Student
 So that I can update my bookmarks
