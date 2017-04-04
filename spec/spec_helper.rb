@@ -18,6 +18,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
+require './model/link.rb'
 #require FILE.join(File.dirname(__FILE__), '..', app.rb)
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
