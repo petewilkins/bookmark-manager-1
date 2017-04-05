@@ -17,8 +17,11 @@
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require File.join(File.dirname(__FILE__),'..','./app/app.rb')
 
-require './model/link.rb'
+require './app/models/link.rb'
+Capybara.app = BookmarkManager
+
 #require FILE.join(File.dirname(__FILE__), '..', app.rb)
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

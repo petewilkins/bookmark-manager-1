@@ -8,3 +8,5 @@ gem "dm-postgres-adapter"
 gem "capybara"
 gem "selenium-webdriver"
 gem 'pry'
+gem "sinatra"
+gem "rake"
