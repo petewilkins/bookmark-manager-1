@@ -18,6 +18,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require File.join(File.dirname(__FILE__),'..','./app/app.rb')
+require 'database_cleaner'
 
 require './app/models/link.rb'
 Capybara.app = BookmarkManager
@@ -25,6 +26,18 @@ Capybara.app = BookmarkManager
 #require FILE.join(File.dirname(__FILE__), '..', app.rb)
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
