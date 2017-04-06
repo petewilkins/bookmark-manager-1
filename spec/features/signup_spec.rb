@@ -5,6 +5,6 @@ feature 'Sign Up' do
     fill_in 'password', with: "password"
     click_button "Sign Up"
     expect(current_path).to eq '/links'
-    expect(page).to have_content "Welcome roi@ma.com"
+    expect(page).to have_content "Welcome, roi@ma.com"
   end
 end
