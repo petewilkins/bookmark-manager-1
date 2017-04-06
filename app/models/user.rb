@@ -7,10 +7,11 @@ class User
   attr_reader :password
 
   property :id, Serial
-  property :email, String
+  property :email, String, format: :email_address
   property :password_digest, Text
 
   validates_confirmation_of :password
+  validates_presence_of :email 
 
   def password=(password)
     @password = password

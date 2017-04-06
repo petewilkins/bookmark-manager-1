@@ -20,4 +20,23 @@ feature 'Sign Up' do
     expect(page).not_to have_content "Welcome, roi@ma.com"
     expect(User.count).to eq 0
   end
+
+  scenario 'user does not enter email address' do
+    visit '/users/new'
+    fill_in 'password', with: "password"
+    fill_in 'password_confirmation', with: 'password'
+    click_button "Sign Up"
+    expect(current_path).to eq '/users'
+    expect(User.count).to eq 0
+  end
+
+  scenario 'user enters invalid email address' do
+    visit '/users/new'
+    fill_in 'email', with: "roifailsma"
+    fill_in 'password', with: "password"
+    fill_in 'password_confirmation', with: 'password'
+    click_button "Sign Up"
+    expect(current_path).to eq '/users'
+    expect(User.count).to eq 0
+  end
 end
